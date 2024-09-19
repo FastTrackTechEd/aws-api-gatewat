@@ -1,0 +1,15 @@
+1. create network load balancer
+2. create VPC Link
+3. Create API Gateway
+4. On the resource section create resouce
+5. select resource name as {proxy+}
+6. Create method
+7. Method Type Any
+8. Integration Type VPC Link
+9. Enable Lamda Proxy Integration
+10. HTTP Method - Any
+11. VPC Link - [Use Stage Variable]
+12. End point - http://${stageVariables.VPCNLB}/{proxy}
+13. Create Stage and add below stage variables
+14. vpcLinkId - Id of the VPC link
+15. VPCNLB - CNAME of the Network load balancer
